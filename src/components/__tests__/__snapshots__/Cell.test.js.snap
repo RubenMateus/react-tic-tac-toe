@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cell /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppfkvi"
+  >
+    <button
+      class="css-113hvi"
+      type="button"
+    />
+  </div>
+</DocumentFragment>
+`;
