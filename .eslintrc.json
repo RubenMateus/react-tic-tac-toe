@@ -3,8 +3,7 @@
     "react-app",
     "prettier",
     "prettier/react",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react/recommended"
   ],
   "plugins": ["prettier"],
   "rules": {
@@ -13,6 +12,8 @@
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
