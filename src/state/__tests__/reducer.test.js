@@ -31,4 +31,13 @@ describe('reducer', () => {
       status: 'inProgress',
     });
   });
+
+  test('Should return state when grid position is filled', () => {
+    const state = { status: 'inProgress', grid: generateGrid(1, 1, () => 'X') };
+    const action = { type: 'CLICK', payload: { x: 0, y: 0 } };
+    const result = reducer(state, action);
+
+    expect(result).not.toBeNull();
+    expect(result).toStrictEqual(state);
+  });
 });
