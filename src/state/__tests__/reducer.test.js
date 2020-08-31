@@ -15,12 +15,11 @@ describe('reducer', () => {
   });
 
   test('should return state when type does not exist', () => {
-    const state = { status: 'success' };
     const action = { type: 'TEST' };
-    const result = reducer(state, action);
+    const result = reducer({}, action);
 
     expect(result).not.toBeNull();
-    expect(result).toStrictEqual({ status: 'success' });
+    expect(result).toStrictEqual({});
   });
 
   test('should return initialState when type is RESET', () => {
