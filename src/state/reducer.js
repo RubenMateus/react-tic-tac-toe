@@ -28,8 +28,6 @@ const reducer = (state, action) => {
         return state;
       }
 
-      console.log(state);
-
       const nextState = clone(state);
 
       nextState.grid[y][x] = turn;
