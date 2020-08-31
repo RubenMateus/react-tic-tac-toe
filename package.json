@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage --no-cache",
+    "test": "react-scripts test --coverage --no-cache --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -54,6 +54,12 @@
       "pretty-quick --staged",
       "eslint src/ --fix",
       "git add"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js, jsx}",
+      "!src/index.js"
     ]
   }
 }

@@ -77,4 +77,24 @@ describe('reducer', () => {
       status: 'inProgress',
     });
   });
+
+  test('should return state nextState when winning or draw conditions do not apply', () => {
+    const state = {
+      status: 'inProgress',
+      turn: 'O',
+      grid: generateGrid(1, 1, () => null),
+    };
+    const action = { type: 'CLICK', payload: { x: 0, y: 0 } };
+    checkForWin.mockImplementation(() => false);
+    checkForDraw.mockImplementation(() => false);
+
+    const result = reducer(state, action);
+
+    expect(result).not.toBeNull();
+    expect(result).toStrictEqual({
+      status: 'inProgress',
+      turn: 'X',
+      grid: [['O']],
+    });
+  });
 });
