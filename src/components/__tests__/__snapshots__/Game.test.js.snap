@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Grid /> renders correctly 1`] = `
+exports[`<Game /> renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="css-1w73uij"
@@ -11,8 +11,11 @@ exports[`<Grid /> renders correctly 1`] = `
       <div>
         Next Turn : X
       </div>
-      <div />
+      <div
+        data-testid="status"
+      />
       <button
+        name="reset"
         type="button"
       >
         Reset
@@ -20,6 +23,7 @@ exports[`<Grid /> renders correctly 1`] = `
     </div>
     <div
       class="css-1w73uij"
+      data-testid="grid"
     >
       <div
         class="css-1x1afi9"
