@@ -7,6 +7,7 @@ import Cell from './Cell';
 const Grid = ({ grid, onClick }) => {
   return (
     <div
+      data-testid="grid"
       className={css`
         display: inline-block;
       `}

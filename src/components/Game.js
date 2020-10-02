@@ -30,8 +30,10 @@ const Game = () => {
         `}
       >
         <div>Next Turn : {turn}</div>
-        <div>{status === 'success' ? `${turn} won!` : null}</div>
-        <button onClick={reset} type="button">
+        <div data-testid="status">
+          {status === 'success' ? `${turn} won!` : null}
+        </div>
+        <button onClick={reset} type="button" name="reset">
           Reset
         </button>
       </div>
