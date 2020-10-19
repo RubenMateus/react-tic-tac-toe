@@ -1,11 +1,9 @@
 {
   "extends": [
     "react-app",
-    "plugin:react/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "prettier",
     "prettier/react"
