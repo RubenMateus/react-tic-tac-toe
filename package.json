@@ -43,6 +43,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": ">=12"
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js, jsx}",
