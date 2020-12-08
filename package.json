@@ -3,11 +3,11 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "emotion": "^11.0.0",
+    "@emotion/css": "^11.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "4.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.6",
