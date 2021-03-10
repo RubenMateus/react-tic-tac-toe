@@ -5,8 +5,7 @@
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
-    "prettier",
-    "prettier/react"
+    "prettier"
   ],
   "plugins": ["react-hooks", "prettier"],
   "rules": {
