@@ -1,5 +1,4 @@
-import React from 'react';
-import Game from './components/Game';
+import Game from "./components/Game";
 
 const App = () => (
   <div>

@@ -1,10 +1,6 @@
 # TIC TAC TOE GAME
 
-## Built with React
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### For Learning purposes but also to have a bit of fun
+## For Learning purposes but also to have a bit of fun
 
 ![Node.js CI](https://github.com/RubenMateus/react-tic-tac-toe/workflows/Node.js%20CI/badge.svg)
 ![CodeQL](https://github.com/RubenMateus/react-tic-tac-toe/workflows/CodeQL/badge.svg)

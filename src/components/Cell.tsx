@@ -1,6 +1,4 @@
-import React from 'react';
-import { css } from '@emotion/css';
-import PropTypes from 'prop-types';
+import { css } from "@emotion/css";
 
 const Cell = ({ value, onClick }) => (
   <div
@@ -22,10 +20,5 @@ const Cell = ({ value, onClick }) => (
     </button>
   </div>
 );
-
-Cell.propTypes = {
-  value: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
-};
 
 export default Cell;

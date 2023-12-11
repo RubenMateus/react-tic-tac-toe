@@ -1,20 +1,20 @@
-import React, { useReducer } from 'react';
-import { css } from '@emotion/css';
+import { useReducer } from "react";
+import { css } from "@emotion/css";
 
-import Grid from './Grid';
+import Grid from "./Grid";
 
-import { reducer, getInitialState } from '../state/reducer';
+import { reducer, getInitialState } from "../state/reducer";
 
 const Game = () => {
   const [state, dispatch] = useReducer(reducer, getInitialState());
   const { grid, status, turn } = state;
 
   const handleClick = (x, y) => {
-    dispatch({ type: 'CLICK', payload: { x, y } });
+    dispatch({ type: "CLICK", payload: { x, y } });
   };
 
   const reset = () => {
-    dispatch({ type: 'RESET' });
+    dispatch({ type: "RESET" });
   };
 
   return (
@@ -31,7 +31,7 @@ const Game = () => {
       >
         <div>Next Turn : {turn}</div>
         <div data-testid="status">
-          {status === 'success' ? `${turn} won!` : null}
+          {status === "success" ? `${turn} won!` : null}
         </div>
         <button onClick={reset} type="button" name="reset">
           Reset

@@ -1,26 +1,26 @@
-import { clone, generateGrid } from '../utils';
-import { checkForWin, checkForDraw } from './conditions';
+import { clone, generateGrid } from "../utils";
+import { checkForWin, checkForDraw } from "./conditions";
 
 const NEXT_TURN = {
-  O: 'X',
-  X: 'O',
+  O: "X",
+  X: "O",
 };
 
 const getInitialState = () => ({
   grid: generateGrid(3, 3, () => null),
-  turn: 'X',
-  status: 'inProgress',
+  turn: "X",
+  status: "inProgress",
 });
 
 const reducer = (state, action) => {
-  if (state.status === 'success' && action.type !== 'RESET') {
+  if (state.status === "success" && action.type !== "RESET") {
     return state;
   }
 
   switch (action.type) {
-    case 'RESET':
+    case "RESET":
       return getInitialState();
-    case 'CLICK': {
+    case "CLICK": {
       const { x, y } = action.payload;
       const { grid, turn } = state;
 
@@ -35,7 +35,7 @@ const reducer = (state, action) => {
       const flatGrid = nextState.grid.flat();
 
       if (checkForWin(flatGrid)) {
-        nextState.status = 'success';
+        nextState.status = "success";
         return nextState;
       }
       if (checkForDraw(flatGrid)) {

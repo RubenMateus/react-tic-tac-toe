@@ -1,8 +1,6 @@
-import React from 'react';
-import { css } from '@emotion/css';
-import PropTypes from 'prop-types';
+import { css } from "@emotion/css";
 
-import Cell from './Cell';
+import Cell from "./Cell";
 
 const Grid = ({ grid, onClick }) => {
   return (
@@ -33,11 +31,6 @@ const Grid = ({ grid, onClick }) => {
       </div>
     </div>
   );
-};
-
-Grid.propTypes = {
-  grid: PropTypes.array.isRequired,
-  onClick: PropTypes.func.isRequired,
 };
 
 export default Grid;
