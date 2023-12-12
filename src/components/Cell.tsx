@@ -1,6 +1,11 @@
 import { css } from "@emotion/css";
 
-const Cell = ({ value, onClick }) => (
+type CellProps = {
+  value: string | null;
+  onClick: () => void;
+};
+
+const Cell = ({ value, onClick }: CellProps) => (
   <div
     className={css`
       background-color: #fff;

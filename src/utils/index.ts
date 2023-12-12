@@ -1,6 +1,10 @@
-export const clone = (x) => JSON.parse(JSON.stringify(x));
+export const clone = (x: unknown) => JSON.parse(JSON.stringify(x));
 
-export const generateGrid = (rows, columns, mapper) =>
+export const generateGrid = (
+  rows: number,
+  columns: number,
+  mapper: () => null
+) =>
   Array(rows)
-    .fill()
-    .map(() => Array(columns).fill().map(mapper));
+    .fill(null)
+    .map(() => Array(columns).fill(null).map(mapper));

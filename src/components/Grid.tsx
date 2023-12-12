@@ -1,8 +1,14 @@
 import { css } from "@emotion/css";
 
 import Cell from "./Cell";
+import { State } from "../state/reducer";
 
-const Grid = ({ grid, onClick }) => {
+type GridProps = {
+  grid: State["grid"];
+  onClick: (x: number, y: number) => void;
+};
+
+const Grid = ({ grid, onClick }: GridProps) => {
   return (
     <div
       data-testid="grid"

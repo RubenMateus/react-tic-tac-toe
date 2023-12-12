@@ -9,7 +9,7 @@ const Game = () => {
   const [state, dispatch] = useReducer(reducer, getInitialState());
   const { grid, status, turn } = state;
 
-  const handleClick = (x, y) => {
+  const handleClick = (x: number, y: number) => {
     dispatch({ type: "CLICK", payload: { x, y } });
   };
 

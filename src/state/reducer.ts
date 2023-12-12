@@ -6,13 +6,29 @@ const NEXT_TURN = {
   X: "O",
 };
 
-const getInitialState = () => ({
+export type State = {
+  grid: (string | null)[][];
+  status: "inProgress" | "success";
+  turn: keyof typeof NEXT_TURN;
+};
+
+const getInitialState = (): State => ({
   grid: generateGrid(3, 3, () => null),
   turn: "X",
   status: "inProgress",
 });
 
-const reducer = (state, action) => {
+type Action =
+  | {
+      type: "CLICK";
+      payload: {
+        x: number;
+        y: number;
+      };
+    }
+  | { type: "RESET" };
+
+const reducer = (state: State, action: Action): State => {
   if (state.status === "success" && action.type !== "RESET") {
     return state;
   }

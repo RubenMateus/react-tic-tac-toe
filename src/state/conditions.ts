@@ -1,4 +1,4 @@
-const checkTree = (a, b, c) => {
+const checkTree = (a: string | null, b: string | null, c: string | null) => {
   if (!a || !b || !c) {
     return false;
   }
@@ -6,7 +6,7 @@ const checkTree = (a, b, c) => {
   return a === b && b === c;
 };
 
-const checkForWin = (flatGrid) => {
+const checkForWin = (flatGrid: (string | null)[]) => {
   const [nw, n, ne, w, c, e, sw, s, se] = flatGrid;
 
   return (
@@ -21,7 +21,7 @@ const checkForWin = (flatGrid) => {
   );
 };
 
-const checkForDraw = (flatGrid) =>
+const checkForDraw = (flatGrid: (string | null)[]) =>
   !checkForWin(flatGrid) && flatGrid.filter(Boolean).length === flatGrid.length;
 
 export { checkForWin, checkForDraw };
