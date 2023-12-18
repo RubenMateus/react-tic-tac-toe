@@ -30,7 +30,7 @@ describe("CheckFor Draw", () => {
   });
 
   test("Should return false when grid inst all filled", () => {
-    const flatGrid = ["X", "0", "X", "O", "X", "O", "X", "O", null];
+    const flatGrid = ["X", "O", "X", "O", "X", "O", "X", "O", null];
 
     const result = checkForDraw(flatGrid);
 
