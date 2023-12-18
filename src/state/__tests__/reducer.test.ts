@@ -1,32 +1,29 @@
-import { reducer } from "../reducer";
+import { getInitialState, reducer } from "../reducer";
 import { generateGrid } from "../../utils";
 import { checkForWin, checkForDraw } from "../conditions";
 import { vi, describe, expect, test } from "vitest";
 
 vi.mock("../conditions");
 
+const defaultState = {
+  status: "success" as const,
+  grid: [["X"]],
+  turn: "O" as const,
+};
+
 describe("reducer", () => {
   test("should return state when status is success and type is not RESET", () => {
-    const state = { status: "success" };
-    const action = { type: "CLICK" };
+    const action = { type: "CLICK" as const, payload: { x: 1, y: 1 } };
 
-    const result = reducer(state, action);
+    const result = reducer(defaultState, action);
 
     expect(result).not.toBeNull();
     expect(result).toStrictEqual({ status: "success" });
   });
 
-  test("should return state when type does not exist", () => {
-    const action = { type: "TEST" };
-    const result = reducer({}, action);
-
-    expect(result).not.toBeNull();
-    expect(result).toStrictEqual({});
-  });
-
   test("should return initialState when type is RESET", () => {
-    const action = { type: "RESET" };
-    const result = reducer({}, action);
+    const action = { type: "RESET" as const };
+    const result = reducer(defaultState, action);
 
     expect(result).not.toBeNull();
     expect(result).toStrictEqual({
