@@ -7,7 +7,7 @@ const NEXT_TURN = {
 };
 
 export type State = {
-  grid: (string | null)[][];
+  grid: Array<Array<string | undefined>>;
   status: "inProgress" | "success";
   turn: keyof typeof NEXT_TURN;
 };
@@ -54,6 +54,7 @@ const reducer = (state: State, action: Action): State => {
         nextState.status = "success";
         return nextState;
       }
+
       if (checkForDraw(flatGrid)) {
         return getInitialState();
       }
